@@ -1,0 +1,46 @@
+#container{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    background-color: #efefef;
+    margin-bottom: 100px;
+}
+
+body{
+    text-align: center;
+}
+
+p{
+    background-color: #E0F2BE;
+    padding: 10px;
+    margin: 10px;
+    width: 40%;
+    border: 1px solid black;
+}
+
+h1{
+    text-align: center;
+    background-color: cornsilk;
+    font-size: 3em;
+}
+
+figure#floating {
+    float: left;
+}
+
+.footer {
+    position: fixed;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: green;
+    color: black;
+}
+
+.footer > p{
+    width: 20%;
+}

@@ -1,0 +1,44 @@
+caption{
+    font-weight: bold;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    text-transform: uppercase;
+}
+
+tbody>tr:nth-child(even){
+    background-color: #efefef;
+}
+
+p:first-of-type{
+    padding-left: 2%;
+}
+
+tr>th{
+    color: white;
+    background-color: red;
+}
+
+td{
+    padding-right: 10px;
+}
+
+tr>td:first-of-type, tr>th:first-of-type{
+    text-transform: uppercase;
+    font-weight: bold;
+    border-right-style: solid;
+    border-right-color: black;
+    border-right-width: 1px;
+}
+
+table{
+    border-collapse: collapse;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+}
+
+body{
+    font-family: sans-serif;
+}
+

@@ -1,0 +1,60 @@
+body{
+    text-align: center;
+    font-family: sans-serif;
+}
+
+h1{
+    font-size: 6em;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    font-weight: bold;
+}
+
+img{
+    border: 3px solid lightblue;
+}
+
+figure{
+    padding-top: 0;
+    text-align: center;
+    font-weight: bold;
+}
+#container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.marja{
+    margin: 0;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    padding-top: 0.5em;
+    padding-bottom: 0.1em;
+    width: 15em;
+}
+
+p{
+    font-style: italic;
+}
+
+h2{
+    margin-top: 5px;
+    padding-bottom: 0;
+    font-size: 2em;
+    margin-bottom: -15px;
+}
+
+#blue{
+    margin-top: 3em;
+    background-color: lightblue;
+}
+
+#cloud{
+    background-color: lightyellow;
+}
+
+#lingon{
+    background-color: lightcoral;
+}
