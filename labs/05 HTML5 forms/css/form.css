@@ -1,0 +1,41 @@
+.txtBOX {
+    width: 100%;
+}
+h1{
+    font-style: italic;
+}
+
+body{
+    background-color: lightgray;
+    font-family: sans-serif;
+
+}
+div{
+    color: black;
+    margin: 10px;
+}
+legend{
+    color: black;
+    font-style: italic;
+    font-size: 1em;
+    background-color: lightblue;
+}
+fieldset{
+    background-color: lightblue;
+}
+
+#sbmtBTN{
+    max-width: 400px;
+    background-color: #efefef;
+    border: 2px solid darkgrey;
+    color: darkblue;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.outerFieldSet{
+    margin-top: 30px;
+}

@@ -6,57 +6,86 @@
 	<head>
 		<meta charset="utf-8"/>
 		<title>Demonstrating HTML forms</title>
+		<link href="css/form.css" type="text/css" rel="stylesheet" />
 	</head>
 	
 	<body>
 		<h1>Turnitin</h1>
 		<form  lang="fi" action="">
-			<div>
-				Name: <input type="text" name="studentname"/>
-			</div>
-			<div>
-				Student id: <input type="text" name="id"  />
-			</div>
-			<div>
-				Email:
-				<!--
-				Make an input named "email"
-				-->
-			</div>
-			<div>
-				Assignment:
-				<!--
-				Make an input named "assignment"
-				-->
-				
-			</div>
+			<fieldset class="outerFieldSet">
+				<legend>Student info</legend>
+				<div>
+					Name: <input type="text" class="txtBOX" name="studentname" placeholder="Insert name" required/>
+				</div>
+				<div>
+					Student id: <input type="number" pattern="\d{7}" class="txtBOX" name="id" placeholder="insert id" oninvalid="this.setCustomValidity('Virhehälytys, anna numero')"/>
+				</div>
+				<div>
+					Email: <input type="email" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" class="txtBOX" name="email" placeholder="insert email" oninvalid="this.setCustomValidity('Virhehälytys, anna sähköposti')"/>
+					<!--
+					Make an input named "email"
+					-->
+				</div>
+			</fieldset>
+			<fieldset class="outerFieldSet">
+				<legend>Assignment and answer</legend>
+				<div>
+					Assignment: <input type="text" class="txtBOX" name="assignment" placeholder="Assignment" required/>
+					<!--
+					Make an input named "assignment"
+					-->
 
-			<div>
-				Code:
+				</div>
+
+				<div>
+					Code: <input type="text" class="txtBOX" name="code" placeholder="insert answer" required/>
+					<!--
+					Make an input named "code" which is a text area to put student's code into.
+					-->
+
+				</div>
+			</fieldset>
+			<fieldset class="outerFieldSet">
+				<legend>Quality of work and ransom</legend>
+				<div>
+					<label>Cheat: <input type="checkbox" name="cheat" class="floaters"/></label>
 				<!--
-				Make an input named "code" which is a text area to put student's code into.
+					Make an input named "cheat" which is a check box the student must check.
 				-->
-				
-			</div>
+				</div>
+				<div>
+					<fieldset>
+						<legend>Pay:</legend>
+						<input type="radio" id="visa" name="payment" value="visa" class="floaters" checked="checked">
+						<label for="visa">visa</label><br>
+						<input type="radio" id="paypal" name="payment" value="paypal" class="floaters">
+						<label for="paypal">paypal</label><br>
+						<input type="radio" id="mastercard" name="payment" value="mastercard" class="floaters">
+						<label for="mastercard">mastercard</label>
+					</fieldset>
+				<!--
+					Make an input named "payment" which is a radio box with possible values of visa, paypal, mastercard
+				-->
+				</div>
+				<div>
+					Score: <select name="score">
+					<option value="choose">Not selected</option>
+					<option value="0">0</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+				</select>
+				<!--
+					Make an input named "score" which is a list of choices for the score
+				-->
+				</div>
+			</fieldset>
 			<div>
-				Cheat:
-			<!--
-				Make an input named "cheat" which is a check box the student must check.
-			-->
+
 			</div>
-			<div>
-				Pay:
-			<!--
-				Make an input named "payment" which is a radio box with possible values of visa, paypal, mastercard
-			-->
-			</div>
-			<div>
-				Score:
-			<!--
-				Make an input named "score" which is a list of choices for the score 
-			-->
-			</div>
-			<input type="submit" />
+			<input type="submit" id="sbmtBTN"/>
 		</form>
 		<a href="http://jigsaw.w3.org/css-validator/check/referer">Validate</a>
 	</body>
