@@ -2,23 +2,25 @@
 
 console.log(document);
 
-document.getElementById('save').onclick = save;
-document.querySelector('#userForm input[type="email"]').onkeypress = function() {
-	console.log('updating email');
-	var email = document.querySelector('#userForm input[type="email"]').value;
-	document.querySelector('#summary p').innerHTML = email;
+let div = document.getElementById("summary");
+let children = div.children;
+
+let anonymousInline = document.querySelector('#userForm input[type="email"]').onkeyup = function () {
+    console.log('updating email');
+    let email = document.querySelector('#userForm input[type="email"]').value;
+    document.querySelector('#summary p').innerHTML = email;
+    children[1].innerHTML=email;
 };
 
+let nameHandler = document.querySelector('#userForm input[type="text"]').onkeyup = function(){
+    let name=document.querySelector('#userForm input[type="text"]');
+    children[0].innerHTML=name.value;
+};
 
-function save() {
-	console.log('save');
-	// get a DOM object representing a form field.
-	var name = document.querySelector('#userForm input[type="text"]');
-	console.log(name);
-	document.querySelector('#summary h1').innerHTML = name.value;
-	var data = document.querySelectorAll('#userForm input');
-	console.log(data);
-	var paragraphs = document.querySelectorAll('#summary p');
-	console.log('found '+paragraphs.length+' p tags');
-	paragraphs[1].innerHTML = 'Hello World!';
-}
+let passwordHandler = document.querySelector('#userForm input[type="password"]').onkeyup = function (){
+    let password=document.querySelector('#userForm input[type="password"]');
+    children[2].innerHTML=password.value;
+};
+anonymousInline();
+nameHandler();
+passwordHandler();
