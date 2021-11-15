@@ -10,8 +10,33 @@
 		map.onmousemove = showCoords;
 		var mydiv = document.getElementById("mydiv");
 		mydiv.onclick = addtext;
+        addList();
+        populateList();
+        textOnListItems();
 	}
-	
+
+    function addList(){
+        let list = document.createElement("ul");
+        list.id = "list";
+        document.getElementById("mydiv").appendChild(list);
+    }
+
+    function populateList(){
+        let list = document.getElementById("list");
+        for (let i = 0; i < 5; i++) {
+            let listItem = document.createElement("li");
+            list.appendChild(listItem);
+        }
+    }
+
+    function textOnListItems(){
+        let list = document.getElementById("list");
+        let items = list.getElementsByTagName("li");
+        for (let i = 0; i < items.length; i++) {
+            items[i].innerHTML = "Random number for list item " + (i+1) + " = " + Math.random();
+        }
+    }
+
 	function showCoords(eventObj) {
 		var coords = document.getElementById("coords");
 		var x = eventObj.clientX;

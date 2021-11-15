@@ -9,6 +9,35 @@ var fidoString = '{ "name": "Fido", "breed": "Mixed", "weight": 38 }';
 var fido = JSON.parse(fidoString);
 console.log("We have made a dog out of a string! " + fido.name);
 
+let doggo = {
+  name:{
+    first: "Musta",
+    last: "Naamio"
+  },
+  breed: "Husky",
+  weight: "30kg",
+  occupation: "Good boy"
+};
+
+window.onload = init;
+function init(){
+  let div = document.createElement("div");
+  div.id = "myDiv";
+  let div2 = document.createElement("div");
+  div2.id = "myDiv2";
+  let p1 = document.createElement("p");
+  let p2 = document.createElement("p");
+  let myString = JSON.stringify(doggo);
+  p1.innerHTML = myString;
+  div.appendChild(p1);
+  document.body.appendChild(div);
+  let myObject = JSON.parse(myString);
+  let occupation = myObject.occupation;
+  p2.innerHTML = JSON.stringify(occupation);
+  div2.appendChild(p2);
+  document.body.appendChild(div2);
+}
+
 
 var fido2 = {
 	name: "Fido",
